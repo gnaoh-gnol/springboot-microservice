@@ -1,0 +1,14 @@
+version: "3.8"
+name: mysqldb
+services:
+  mysql_authentication:
+    image: mysql
+    restart: always
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_DATABASE=authentication-service
+      - MYSQL_USER=longhd
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+

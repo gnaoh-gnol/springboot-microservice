@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  mysqldb:
+    image: mysql
+    restart: always
+    ports:
+      - "3307:3307"
+    environment:
+      - MYSQL_DATABASE=inventory-service
+      - MYSQL_USER=longhd
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
